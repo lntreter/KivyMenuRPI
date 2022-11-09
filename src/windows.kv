@@ -1,0 +1,414 @@
+#:kivy 2.0
+<Button>
+    font_size: 16
+    color: 0,.501,0,1
+    size_hint: .196, .085
+    background_normal: ''
+
+WindowManager:
+    FirstWindow:
+    SecondWindow:
+    ThirdWindow:
+    FourthWindow:
+    FifthWindow:
+
+<FirstWindow>:
+    name: "first"
+
+    FloatLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'bg1.png'
+
+        Image:
+            source: 'logo.png'
+            size_hint: .65, .65
+            pos_hint: {"center_x": 0.65,"center_y": 0.33}
+
+        Button:
+            text: "1.Kat"
+            pos_hint: {"center_x": 0.25,"center_y": 0.45} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 275, 275
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+        Button:
+            text: "2.Kat"
+            pos_hint: {"center_x": 0.25,"center_y": 0.3}
+            on_release: 
+                app.root.current = "third"
+                root.manager.transition.direction = "left"
+
+            Image:
+                source: 'buton1.png'
+                size: 275, 275
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "3.Kat"
+            pos_hint: {"center_x": 0.25,"center_y": 0.15}
+            on_release: 
+                app.root.current = "fourth"
+                root.manager.transition.direction = "up"
+
+            Image:
+                source: 'buton1.png'
+                size: 275, 275
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+<SecondWindow>:
+    name: "second"
+
+    FloatLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'bg1.png'
+
+        Image:
+            source: 'logo.png'
+            size_hint: .65, .65
+            pos_hint: {"center_x": 0.6817,"center_y": 0.33}
+
+        Button:
+            text: "Domates"
+            color: .8,0,0,1
+            pos_hint: {"center_x": 0.18,"center_y": 0.43} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Salatalık"
+            pos_hint: {"center_x": 0.4,"center_y": 0.43} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Biber"
+            color: 0,.8,0,1
+            pos_hint: {"center_x": 0.4,"center_y": 0.3} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Patlıcan"
+            color: .439,.160,.388,1
+            pos_hint: {"center_x": 0.18,"center_y": 0.3} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Muz"
+            color: .941, .941, .03, 1
+            pos_hint: {"center_x": 0.29,"center_y": 0.17} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "first"
+                root.manager.transition.direction = "up"
+            
+            Image:
+                source: 'buton1.png'
+                size: 275, 275
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+<ThirdWindow>:
+    name: "third"
+
+    FloatLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'bg1.png'
+
+        Image:
+            source: 'logo.png'
+            size_hint: .65, .65
+            pos_hint: {"center_x": 0.6817,"center_y": 0.33}
+
+        Button:
+            text: "Domates"
+            pos_hint: {"center_x": 0.18,"center_y": 0.43} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Salatalık"
+            pos_hint: {"center_x": 0.4,"center_y": 0.43} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Biber"
+            pos_hint: {"center_x": 0.4,"center_y": 0.3} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Patlıcan"
+            pos_hint: {"center_x": 0.18,"center_y": 0.3} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Muz"
+            pos_hint: {"center_x": 0.29,"center_y": 0.17} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "first"
+                root.manager.transition.direction = "right"
+            
+            Image:
+                source: 'buton1.png'
+                size: 275, 275
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+<FourthWindow>:
+    name: "fourth"
+
+    FloatLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'bg1.png'
+
+        Image:
+            source: 'logo.png'
+            size_hint: .65, .65
+            pos_hint: {"center_x": 0.6817,"center_y": 0.33}
+
+        Button:
+            text: "Domates"
+            pos_hint: {"center_x": 0.18,"center_y": 0.43} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Salatalık"
+            pos_hint: {"center_x": 0.4,"center_y": 0.43} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Biber"
+            pos_hint: {"center_x": 0.4,"center_y": 0.3} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Patlıcan"
+            pos_hint: {"center_x": 0.18,"center_y": 0.3} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Muz"
+            pos_hint: {"center_x": 0.29,"center_y": 0.17} #.25
+            on_release: 
+                app.root.current = "second"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 240, 240
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "first"
+                root.manager.transition.direction = "down"
+            
+            Image:
+                source: 'buton1.png'
+                size: 275, 275
+                keep_ratio: False
+                allow_stretch: True
+                center_x: self.parent.center_x + 8
+                center_y: self.parent.center_y + 3   
+
+<FifthhWindow>:
+    name: "fifth"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            text: "Fifth Screen"
+            font_size: 32
+
+        Button:
+            text: "Go Back"
+            font_size: 32
+            on_release:
+                app.root.current = "first"
+                root.manager.transition.direction = "right"
